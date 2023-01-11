@@ -6,6 +6,7 @@ var config_data = `
   "checkboxAs": "10",
   "prematch": [
     { "name": "Scouter Initials",
+      "gsCol": "scouter",
       "code": "s",
       "type": "scouter",
       "size": 5,
@@ -20,6 +21,7 @@ var config_data = `
       "disabled": "true"
     },
     { "name": "Match Level",
+      "gsCol": "match",
       "code": "l",
       "type": "level",
       "choices": {
@@ -31,6 +33,7 @@ var config_data = `
       "required": "true"
     },
     { "name": "Match #",
+      "gsCol": "match #",
       "code": "m",
       "type": "match",
       "min": 1,
@@ -51,6 +54,7 @@ var config_data = `
       "required":"true"
     },
     { "name": "Team #",
+      "gsCol": "team #",
       "code": "t",
       "type": "team",
       "min": 1,
