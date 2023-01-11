@@ -1,3 +1,4 @@
+"enable_google_sheets": "true",
 var config_data = `
 {
   "title": "Scouting PASS 2023",
