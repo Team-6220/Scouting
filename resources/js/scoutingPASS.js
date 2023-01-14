@@ -742,6 +742,14 @@ function getData(useStr) {
 		if (name === "auto_low_cube" || name === "auto_low_cone") {
 			autoPoints += 3 * e.value;
 		}
+		if (name === "auto_docked") {
+			if (e.value == "d") {
+				autoPoints += 8;
+			}
+			if (e.value == "e") {
+				autoPoints += 12;
+			}
+		}
 		if (name === "high_cube" || name === "high_cone") {
 			telePoints += 6 * e.value;
 		}
@@ -750,6 +758,17 @@ function getData(useStr) {
 		}
 		if (name === "low_cube" || name === "low_cone") {
 			telePoints += 3 * e.value;
+		}
+		if (name === "charge_pad_status") {
+			if (e.value == "p"){
+				telePoints += 2;	
+			}
+			if (e.value == "d"){
+				telePoints += 6;	
+			}
+			if (e.value == "e"){
+				telePoints += 10;	
+			}
 		}
 		if (radio > -1) {
 			if (e.checked) {
