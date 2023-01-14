@@ -63,7 +63,7 @@ var config_data = `
       "max": 99999
     },
     { "name": "Auto Start Position",
-      "gsCol": "auto start pos",
+      "gsCol": "auto_start_pos",
       "code": "as",
       "type": "field_image",
       "filename": "2023/field_image.png"
