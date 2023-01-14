@@ -34,7 +34,7 @@ var config_data = `
       "required": "true"
     },
     { "name": "Match #",
-      "gsCol": "match #",
+      "gsCol": "match_num",
       "code": "m",
       "type": "match",
       "min": 1,
@@ -56,7 +56,7 @@ var config_data = `
       "required":"true"
     },
     { "name": "Team #",
-      "gsCol": "team #",
+      "gsCol": "team_num",
       "code": "t",
       "type": "team",
       "min": 1,
@@ -76,37 +76,37 @@ var config_data = `
       "type": "bool"
     },
     { "name": "High Cube Scored",
-      "gsCol": "auto high cube",
+      "gsCol": "auto_high_cube",
       "code": "auh",
       "type": "counter"
     },
     { "name": "Medium Cube Scored",
-      "gsCol": "auto med cube",
+      "gsCol": "auto_med_cube",
       "code": "aum",
       "type": "counter"
     },
     { "name": "Low Cube Scored",
-      "gsCol": "auto low cube",
+      "gsCol": "auto_low_cube",
       "code": "aul",
       "type": "counter"
     },
     { "name": "High Cone Scored",
-      "gsCol": "auto high cone",
+      "gsCol": "auto_high_cone",
       "code": "aoh",
       "type": "counter"
     },
     { "name": "Medium Cone Scored",
-      "gsCol": "auto med cone",
+      "gsCol": "auto_med_cone",
       "code": "aom",
       "type": "counter"
     },
     { "name": "Low Cone Scored",
-      "gsCol": "auto low cone",
+      "gsCol": "auto_low_cone",
       "code": "aol",
       "type": "counter"
     },
     { "name": "Docked",
-      "gsCol": "auto docked",
+      "gsCol": "auto_docked",
       "code": "ad",
       "type":"radio",
       "choices": {
@@ -119,37 +119,37 @@ var config_data = `
   ],
   "teleop": [
     { "name": "High Cube Scored",
-      "gsCol": "high cube",
+      "gsCol": "high_cube",
       "code": "tuh",
       "type": "counter"
     },
     { "name": "Medium Cube Scored",
-      "gsCol": "med cube",
+      "gsCol": "med_cube",
       "code": "tum",
       "type": "counter"
     },
     { "name": "Low Cube Scored",
-      "gsCol": "low cube",
+      "gsCol": "low_cube",
       "code": "tul",
       "type": "counter"
     },
     { "name": "High Cone Scored",
-      "gsCol": "high cone",
+      "gsCol": "high_cone",
       "code": "toh",
       "type": "counter"
     },
     { "name": "Medium Cone Scored",
-      "gsCol": "med cone",
+      "gsCol": "med_cone",
       "code": "tom",
       "type": "counter"
     },
     { "name": "Low Cone Scored",
-      "gsCol": "low cone",
+      "gsCol": "low_cone",
       "code": "tol",
       "type": "counter"
     },
     { "name": "Feeder Count",
-      "gsCol": "feeder count",
+      "gsCol": "feeder_count",
       "code": "tfc",
       "type": "counter"
     },
@@ -159,12 +159,12 @@ var config_data = `
       "type": "bool"
     },
     { "name": "Smart Placement (creates Links)",
-      "gsCol": "creates links",
+      "gsCol": "creates_links",
       "code": "lnk",
       "type": "bool"
     },
     { "name": "Cargo Intake From",
-      "gsCol": "carge intake from",
+      "gsCol": "carge_intake_from",
       "code": "cif",
       "type": "radio",
       "choices": {
@@ -178,12 +178,12 @@ var config_data = `
   ],
   "endgame": [
     { "name": "Docking Timer",
-      "gsCol": "how long to dock",
+      "gsCol": "how_long_to_dock",
       "code": "dt",
       "type": "timer"
     },
     { "name": "Final Status",
-      "gsCol": "charge pad status",
+      "gsCol": "charge_pad_status",
       "code": "fs",
       "type":"radio",
       "choices": {
@@ -196,14 +196,14 @@ var config_data = `
       "defaultValue": "x"
     },
     { "name": "# of alliance bots docked/engaged",
-      "gsCol": "bots docked/engaged",
+      "gsCol": "bots_docked/engaged",
       "code": "cn",
       "type": "counter"
     }
   ],
   "postmatch": [
     { "name": "Driver Skill",
-      "gsCol": "driver skill",
+      "gsCol": "driver_skill",
       "code": "ds",
       "type": "radio",
       "choices": {
@@ -215,7 +215,7 @@ var config_data = `
       "defaultValue": "x"
     },
     { "name": "Links Scored",
-      "gsCol": "num links",
+      "gsCol": "num_links",
       "code": "ls",
       "type": "counter"
     },
@@ -256,12 +256,12 @@ var config_data = `
       "type": "bool"
     },
     { "name": "Avoided coopertition",
-      "gsCol": "high cube",
+      "gsCol": "coopertition",
       "code": "coo",
       "type": "bool"
     },
     { "name": "Make good alliance partner?",
-      "gsCol": "good partner",
+      "gsCol": "good_partner",
       "tooltip": "Would you want this robot on your alliance in eliminations?",
       "code": "all",
       "type": "bool"
