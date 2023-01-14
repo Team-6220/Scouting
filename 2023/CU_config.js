@@ -164,7 +164,7 @@ var config_data = `
       "type": "bool"
     },
     { "name": "Cargo Intake From",
-      "gsCol": "carge_intake_from",
+      "gsCol": "cargo_intake_from",
       "code": "cif",
       "type": "radio",
       "choices": {
