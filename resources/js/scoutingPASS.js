@@ -719,6 +719,8 @@ function getData(useStr) {
 	var start = true
 	var checkedChar = 'Y'
 	var uncheckedChar = 'N'
+	var autoPoints = 0
+	var telePoints  = 0;
 	if (checkboxAs == 'TF') {
 	  checkedChar = 'T';
 	  uncheckedChar = 'F';
@@ -731,6 +733,24 @@ function getData(useStr) {
 		code = e.id.substring(6)
 		name = e.name
 		radio = code.indexOf("_")
+		if (name === "auto_high_cube" || name === "auto_high_cone") {
+			autoPoints += 6 * e.value;
+		}
+		if (name === "auto_med_cube" || name === "auto_med_cone") {
+			autoPoints += 4 * e.value;
+		}
+		if (name === "auto_low_cube" || name === "auto_low_cone") {
+			autoPoints += 3 * e.value;
+		}
+		if (name === "high_cube" || name === "high_cone") {
+			telePoints += 6 * e.value;
+		}
+		if (name === "med_cube" || name === "med_cone") {
+			telePoints += 4 * e.value;
+		}
+		if (name === "low_cube" || name === "low_cone") {
+			telePoints += 3 * e.value;
+		}
 		if (radio > -1) {
 			if (e.checked) {
 				if (start==false) {
@@ -776,6 +796,8 @@ function getData(useStr) {
 			}
 		}
 	}
+	fd.append("auto_points_scored", autoPoints);
+	fd.append("tele_points_scored", telePoints);
 	if (useStr) {
 		return str
 	} else {
