@@ -41,6 +41,9 @@ function addTimer(table, idx, name, data){
   cell2.classList.add("field");
 
   var button1 = document.createElement("button");
+  button1.setAttribute("id", "start_"+data.code);
+  button1.setAttribute("type", "checkbox");
+  button1.setAttribute("onclick", "timer(this.parentElement)");
   button1.innerHTML += "Start"
   cell2.appendChild(button1);
 
