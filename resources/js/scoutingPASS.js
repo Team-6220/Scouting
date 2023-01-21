@@ -746,10 +746,12 @@ function getData(useStr) {
 			if (e.value === "d") {
 				autoPoints += 8;
 				console.log("ad")
+				console.log(e.value)
 			}
 			if (e.value === "e") {
 				autoPoints += 12;
 				console.log("ae")
+				console.log(e.value)
 			}
 		}
 		if (name === "high_cube" || name === "high_cone") {
@@ -765,14 +767,17 @@ function getData(useStr) {
 			if (e.value === "p"){
 				telePoints += 2;
 				console.log("tp")
+				console.log(e.value)
 			}
 			if (e.value === "d"){
 				telePoints += 6;
 				console.log("td")
+				console.log(e.value)
 			}
 			if (e.value === "e"){
 				telePoints += 10;
 				console.log("te")
+				console.log(e.value)
 			}
 		}
 		if (radio > -1) {
