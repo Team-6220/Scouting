@@ -174,6 +174,11 @@ var config_data = `
         "x": "Not Attempted"
       },
       "defaultValue": "x"
+    },
+    { "name": "Test Timer",
+      "gsCol": "test",
+      "code": "test",
+      "type": "timer"
     }
   ],
   "endgame": [
