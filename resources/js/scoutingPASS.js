@@ -836,6 +836,17 @@ function getData(useStr) {
 	} else if (fd.get("driver_skill")=="v") {
 		fd.set("driver_skill", "Very Good")
 	}
+	if(fd.get("defense")=="x"){
+		fd.set("defense", "No Defense")
+	} else if (fd.get("defense")=="b") {
+		fd.set("defense", "Below Average")
+	} else if (fd.get("defense")=="a") {
+		fd.set("defense", "Average")
+	} else if (fd.get("defense")=="g") {
+		fd.set("defense", "Better Than Average")
+	} else if (fd.get("defense")=="e") {
+		fd.set("defense", "Excellent")
+	}
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
 	if (useStr) {
