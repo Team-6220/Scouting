@@ -744,13 +744,13 @@ function getData(useStr) {
 		}
 		
 		if (name === "high_cube" || name === "high_cone") {
-			telePoints += 6 * e.value;
+			telePoints += 5 * e.value;
 		}
 		if (name === "med_cube" || name === "med_cone") {
-			telePoints += 4 * e.value;
+			telePoints += 3 * e.value;
 		}
 		if (name === "low_cube" || name === "low_cone") {
-			telePoints += 3 * e.value;
+			telePoints += 2 * e.value;
 		}
 		if (radio > -1) {
 			if (e.checked) {
