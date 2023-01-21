@@ -121,7 +121,7 @@ var config_data = `
     { "name": "High Cube Scored",
       "gsCol": "high_cube",
       "code": "tuh",
-      "type": "timer"
+      "type": "counter"
     },
     { "name": "Medium Cube Scored",
       "gsCol": "med_cube",
