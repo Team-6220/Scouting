@@ -798,17 +798,17 @@ function getData(useStr) {
 		}
 	}
 	if(fd.get("charge_pad_status")=="p"){
-		telePoints += 2;
+		autoPoints += 2;
 		console.log("tp")
 		console.log(e.value)
 	}
 	if(fd.get("charge_pad_status")=="d"){
-		telePoints += 6;
+		autoPoints += 6;
 		console.log("td")
 		console.log(e.value)
 	}
 	if(fd.get("charge_pad_status")=="e"){
-		telePoints += 10;
+		autoPoints += 10;
 		console.log("te")
 		console.log(e.value)
 	}
