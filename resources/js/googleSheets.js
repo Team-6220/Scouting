@@ -1,11 +1,12 @@
 function setUpGoogleSheets() {
+    
+}
+
+function sendToGoogleSheets(){
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwLMqEvVQYSSxeAL58DGDdNPwcDPOUhPRbErxkIYY_ElKVK6vv0umVDW5z5WM6d07k/exec'
     const form = document.querySelector('#scoutingForm')
     const btn = document.querySelector('#submit')
  
-    
-    form.addEventListener('submit', e => {
-      e.preventDefault()
       btn.disabled = true
       btn.innerHTML = "Sending..."
 
@@ -22,5 +23,5 @@ function setUpGoogleSheets() {
 
       btn.disabled = false
       btn.innerHTML = "Send to Google Sheets"
-    })
+    
 }
