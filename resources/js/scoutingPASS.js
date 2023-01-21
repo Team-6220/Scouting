@@ -827,6 +827,15 @@ function getData(useStr) {
 	} else {
 		fd.set("swerve", "no")
 	}
+	if(fd.get("driver_skill")=="x"){
+		fd.set("driver_skill", "Not Observed")
+	} else if (fd.get("driver_skill")=="n") {
+		fd.set("driver_skill", "Not Good")
+	} else if (fd.get("driver_skill")=="a") {
+		fd.set("driver_skill", "Average")
+	} else if (fd.get("driver_skill")=="v") {
+		fd.set("driver_skill", "Very Good")
+	}
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
 	if (useStr) {
