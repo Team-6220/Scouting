@@ -822,6 +822,7 @@ function getData(useStr) {
 		console.log("ae")
 		console.log(e.value)
 	}
+	console.log(fd.get("swerve"))
 	if(fd.get("swerve")=="0"){
 		fd.set("swerve", "no")	
 	} else {
