@@ -813,12 +813,12 @@ function getData(useStr) {
 		console.log(e.value)
 	}
 	if(fd.get("auto_docked")=="d"){
-		telePoints += 8;
+		autoPoints += 8;
 		console.log("ad")
 		console.log(e.value)
 	}
 	if(fd.get("auto_docked")=="e"){
-		telePoints += 12;
+		autoPoints += 12;
 		console.log("ae")
 		console.log(e.value)
 	}
