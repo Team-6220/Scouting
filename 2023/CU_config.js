@@ -121,7 +121,7 @@ var config_data = `
     { "name": "High Cube Scored",
       "gsCol": "high_cube",
       "code": "tuh",
-      "type": "counter"
+      "type": "timer"
     },
     { "name": "Medium Cube Scored",
       "gsCol": "med_cube",
@@ -162,11 +162,6 @@ var config_data = `
       "gsCol": "creates_links",
       "code": "lnk",
       "type": "bool"
-    },
-    { "name": "Test Timer",
-      "gsCol": "test",
-      "code": "tdt",
-      "type": "timer"
     },
     { "name": "Cargo Intake From",
       "gsCol": "cargo_intake_from",
