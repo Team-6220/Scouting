@@ -764,35 +764,6 @@ function getData(useStr) {
 				if (useStr) {
 					str=str+code.substr(0,radio)+'='+e.value
 				} else {
-					if (name === "charge_pad_status") {
-						if (e.value === "p"){
-							telePoints += 2;
-							console.log("tp")
-							console.log(e.value)
-						}
-						if (e.value === "d"){
-							telePoints += 6;
-							console.log("td")
-							console.log(e.value)
-						}
-						if (e.value === "e"){
-							telePoints += 10;
-							console.log("te")
-							console.log(e.value)
-						}
-					}
-					if (name === "auto_docked") {
-						if (e.value === "d") {
-							autoPoints += 8;
-							console.log("ad")
-							console.log(e.value)
-						}
-						if (e.value === "e") {
-							autoPoints += 12;
-							console.log("ae")
-							console.log(e.value)
-						}
-					}
 					fd.append(name, ''+e.value)
 				}
 				document.getElementById("display_"+code.substr(0, radio)).value = e.value
@@ -825,6 +796,31 @@ function getData(useStr) {
 				}
 			}
 		}
+	}
+	if(fd.get("charge_pad_status")=="p"){
+		telePoints += 2;
+		console.log("tp")
+		console.log(e.value)
+	}
+	if(fd.get("charge_pad_status")=="d"){
+		telePoints += 6;
+		console.log("td")
+		console.log(e.value)
+	}
+	if(fd.get("charge_pad_status")=="e"){
+		telePoints += 10;
+		console.log("te")
+		console.log(e.value)
+	}
+	if(fd.get("auto_docked")=="d"){
+		telePoints += 8;
+		console.log("ad")
+		console.log(e.value)
+	}
+	if(fd.get("auto_docked")=="e"){
+		telePoints += 12;
+		console.log("ae")
+		console.log(e.value)
 	}
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
