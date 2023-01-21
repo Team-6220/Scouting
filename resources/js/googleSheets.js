@@ -1,6 +1,6 @@
- const scriptURL
- const form
- const btn
+ var scriptURL
+ var form
+ var btn
 
 function setUpGoogleSheets() {
     scriptURL = 'https://script.google.com/macros/s/AKfycbwLMqEvVQYSSxeAL58DGDdNPwcDPOUhPRbErxkIYY_ElKVK6vv0umVDW5z5WM6d07k/exec'
