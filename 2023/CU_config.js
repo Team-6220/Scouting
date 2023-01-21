@@ -199,12 +199,6 @@ var config_data = `
       "gsCol": "bots_docked/engaged",
       "code": "cn",
       "type": "counter"
-    },
-    {
-      "name": "test timer",
-      "gsCol": "test_timer",
-      "code": "tt",
-      "type": "timer"
     }
   ],
   "postmatch": [
