@@ -203,7 +203,7 @@ var config_data = `
     {
       "name": "test timer",
       "gsCol": "test_timer",
-      "code" "tt",
+      "code": "tt",
       "type": "timer"
     }
   ],
