@@ -743,10 +743,10 @@ function getData(useStr) {
 			autoPoints += 3 * e.value;
 		}
 		if (name === "auto_docked") {
-			if (e.value == "d") {
+			if (e.value === "d") {
 				autoPoints += 8;
 			}
-			if (e.value == "e") {
+			if (e.value === "e") {
 				autoPoints += 12;
 			}
 		}
@@ -760,13 +760,13 @@ function getData(useStr) {
 			telePoints += 3 * e.value;
 		}
 		if (name === "charge_pad_status") {
-			if (e.value == "p"){
+			if (e.value === "p"){
 				telePoints += 2;	
 			}
-			if (e.value == "d"){
+			if (e.value === "d"){
 				telePoints += 6;	
 			}
-			if (e.value == "e"){
+			if (e.value === "e"){
 				telePoints += 10;	
 			}
 		}
