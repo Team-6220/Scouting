@@ -745,9 +745,11 @@ function getData(useStr) {
 		if (name === "auto_docked") {
 			if (e.value === "d") {
 				autoPoints += 8;
+				console.log("ad")
 			}
 			if (e.value === "e") {
 				autoPoints += 12;
+				console.log("ae")
 			}
 		}
 		if (name === "high_cube" || name === "high_cone") {
@@ -761,13 +763,16 @@ function getData(useStr) {
 		}
 		if (name === "charge_pad_status") {
 			if (e.value === "p"){
-				telePoints += 2;	
+				telePoints += 2;
+				console.log("tp")
 			}
 			if (e.value === "d"){
-				telePoints += 6;	
+				telePoints += 6;
+				console.log("td")
 			}
 			if (e.value === "e"){
-				telePoints += 10;	
+				telePoints += 10;
+				console.log("te")
 			}
 		}
 		if (radio > -1) {
