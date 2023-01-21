@@ -822,6 +822,11 @@ function getData(useStr) {
 		console.log("ae")
 		console.log(e.value)
 	}
+	if(fd.get("swerve")=="0"){
+		fd.set("swerve", "no")	
+	} else {
+		fd.set("swerve", "yes")
+	}
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
 	if (useStr) {
