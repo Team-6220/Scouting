@@ -163,6 +163,11 @@ var config_data = `
       "code": "lnk",
       "type": "bool"
     },
+    { "name": "Test Timer",
+      "gsCol": "test",
+      "code": "tdt",
+      "type": "timer"
+    },
     { "name": "Cargo Intake From",
       "gsCol": "cargo_intake_from",
       "code": "cif",
@@ -174,11 +179,6 @@ var config_data = `
         "x": "Not Attempted"
       },
       "defaultValue": "x"
-    },
-    { "name": "Test Timer",
-      "gsCol": "test",
-      "code": "test",
-      "type": "timer"
     }
   ],
   "endgame": [
