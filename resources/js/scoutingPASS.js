@@ -843,9 +843,14 @@ function getData(useStr) {
 	} else if (fd.get("defense")=="a") {
 		fd.set("defense", "Average")
 	} else if (fd.get("defense")=="g") {
-		fd.set("defense", "Better Than Average")
+		fd.set("defense", "Good")
 	} else if (fd.get("defense")=="e") {
 		fd.set("defense", "Excellent")
+	}
+	if(fd.get("good_partner")=="1"){
+		fd.set("good_partner", "yes")
+	} else {
+		fd.set("good_partner", "no")
 	}
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
