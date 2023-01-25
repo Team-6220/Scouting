@@ -868,6 +868,17 @@ function getData(useStr) {
 	} else {
 		fd.set("auto_docked", "no attempt")
 	}
+	if(fd.get("charge_pad_status")=="e") {
+		fd.set("charge_pad_status", "engaged")
+	} else if (fd.get("charge_pad_status")=="d") {
+		fd.set("charge_pad_status", "docked")
+	} else if (fd.get("charge_pad_status")=="p") {
+		fd.set("charge_pad_status", "parked")
+	} else if (fd.get("charge_pad_status")=="a") {
+		fd.set("charge_pad_status", "failed")
+	} else {
+		fd.set("charge_pad_status", "not attempted")
+	}
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
 	if (useStr) {
