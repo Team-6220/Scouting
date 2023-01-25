@@ -879,6 +879,25 @@ function getData(useStr) {
 	} else {
 		fd.set("charge_pad_status", "not attempted")
 	}
+	if(fd.get("mobility")=="1"){
+		fd.set("mobility", "yes")
+	} else {
+		fd.set("mobility", "no")
+	}
+	if(fd.get("tipped")=="1") {
+		fd.set("tipped", "yes")
+	} else {
+		fd.set("tipped", "no")
+	}
+	if(fd.get("cargo_intake_from")=="b") {
+		fd.set("cargo_intake_from", "both")
+	} else if (fd.get("cargo_intake_from")=="t") {
+		fd.set("cargo_intake_from", "high")
+	} else if (fd.get("cargo_intake_from")=="g") {
+		fd.set("cargo_intake_from", "ground")
+	} else {
+		fd.set("cargo_intake_from", "not attempted")
+	}
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
 	if (useStr) {
