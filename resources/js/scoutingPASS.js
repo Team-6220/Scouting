@@ -828,29 +828,45 @@ function getData(useStr) {
 		fd.set("swerve", "no")
 	}
 	if(fd.get("driver_skill")=="x"){
-		fd.set("driver_skill", "Not Observed")
+		fd.set("driver_skill", "not observed")
 	} else if (fd.get("driver_skill")=="n") {
-		fd.set("driver_skill", "Not Good")
+		fd.set("driver_skill", "not good")
 	} else if (fd.get("driver_skill")=="a") {
-		fd.set("driver_skill", "Average")
+		fd.set("driver_skill", "average")
 	} else if (fd.get("driver_skill")=="v") {
-		fd.set("driver_skill", "Very Good")
+		fd.set("driver_skill", "very good")
 	}
 	if(fd.get("defense")=="x"){
-		fd.set("defense", "No Defense")
+		fd.set("defense", "no defense")
 	} else if (fd.get("defense")=="b") {
-		fd.set("defense", "Below Average")
+		fd.set("defense", "below average")
 	} else if (fd.get("defense")=="a") {
-		fd.set("defense", "Average")
+		fd.set("defense", "average")
 	} else if (fd.get("defense")=="g") {
-		fd.set("defense", "Good")
+		fd.set("defense", "good")
 	} else if (fd.get("defense")=="e") {
-		fd.set("defense", "Excellent")
+		fd.set("defense", "excellent")
 	}
 	if(fd.get("good_partner")=="1"){
 		fd.set("good_partner", "yes")
 	} else {
 		fd.set("good_partner", "no")
+	}
+	if(fd.get("confidence")=="v"){
+		fd.set("confidence", "very")
+	} else if (fd.get("confidence")=="a"){
+		fd.set("confidence", "average")	
+	} else {
+		fd.set("confidence", "bad")	
+	}
+	if(fd.get("auto_docked")=="d"){
+		fd.set("auto_docked", "docked")
+	} else if (fd.get("auto_docked")=="e"){
+		fd.set("auto_docked", "engaged")
+	} else if (fd.get("auto_docked")=="a"){
+		fd.set("auto_docked", "failed")
+	} else {
+		fd.set("auto_docked", "no attempt")
 	}
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
