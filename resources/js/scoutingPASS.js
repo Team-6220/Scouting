@@ -721,6 +721,8 @@ function getData(useStr) {
 	var uncheckedChar = 'N'
 	var autoPoints = 0
 	var telePoints  = 0;
+	var offense = 0;
+	var defense = 0;
 	if (checkboxAs == 'TF') {
 	  checkedChar = 'T';
 	  uncheckedChar = 'F';
@@ -824,6 +826,8 @@ function getData(useStr) {
 	}
 	if(fd.get("swerve")=="1"){
 		fd.set("swerve", "yes")	
+		offense += 7
+		defense += 15
 	} else {
 		fd.set("swerve", "no")
 	}
@@ -833,19 +837,32 @@ function getData(useStr) {
 		fd.set("driver_skill", "not good")
 	} else if (fd.get("driver_skill")=="a") {
 		fd.set("driver_skill", "average")
+		offense +=7
+		defense +=13
 	} else if (fd.get("driver_skill")=="v") {
 		fd.set("driver_skill", "very good")
+		offense += 10
+		defense += 20
 	}
 	if(fd.get("defense")=="x"){
 		fd.set("defense", "no defense")
+		offense += 2
 	} else if (fd.get("defense")=="b") {
 		fd.set("defense", "below average")
+		offense += 1
+		defense += 5
 	} else if (fd.get("defense")=="a") {
 		fd.set("defense", "average")
+		offense += 3
+		defense +=15
 	} else if (fd.get("defense")=="g") {
 		fd.set("defense", "good")
+		offense += 4
+		defense += 30
 	} else if (fd.get("defense")=="e") {
 		fd.set("defense", "excellent")
+		offense += 6
+		defense += 40
 	}
 	if(fd.get("good_partner")=="1"){
 		fd.set("good_partner", "yes")
@@ -854,15 +871,23 @@ function getData(useStr) {
 	}
 	if(fd.get("confidence")=="v"){
 		fd.set("confidence", "very")
+		offense += 10
+		defense += 10
 	} else if (fd.get("confidence")=="a"){
 		fd.set("confidence", "average")	
+		offense +=4
+		defense +=4
 	} else {
 		fd.set("confidence", "bad")	
 	}
 	if(fd.get("auto_docked")=="d"){
 		fd.set("auto_docked", "docked")
+		defense +=6
+		offesne += 3
 	} else if (fd.get("auto_docked")=="e"){
 		fd.set("auto_docked", "engaged")
+		defense += 13
+		offense +=5
 	} else if (fd.get("auto_docked")=="a"){
 		fd.set("auto_docked", "failed")
 	} else {
@@ -870,36 +895,57 @@ function getData(useStr) {
 	}
 	if(fd.get("charge_pad_status")=="e") {
 		fd.set("charge_pad_status", "engaged")
+		offense += 6
+		defense += 16
 	} else if (fd.get("charge_pad_status")=="d") {
 		fd.set("charge_pad_status", "docked")
+		offense +=4
+		defense += 11
 	} else if (fd.get("charge_pad_status")=="p") {
 		fd.set("charge_pad_status", "parked")
+		offense += 1
+		defense += 3
 	} else if (fd.get("charge_pad_status")=="a") {
 		fd.set("charge_pad_status", "failed")
+		defense -= 8
 	} else {
 		fd.set("charge_pad_status", "not attempted")
 	}
 	if(fd.get("mobility")=="1"){
 		fd.set("mobility", "yes")
+		defense += 4
 	} else {
 		fd.set("mobility", "no")
 	}
 	if(fd.get("tipped")=="1") {
 		fd.set("tipped", "yes")
+		defense -= 15
+		offense -= 14
 	} else {
 		fd.set("tipped", "no")
 	}
 	if(fd.get("cargo_intake_from")=="b") {
 		fd.set("cargo_intake_from", "both")
+		offense += 6
 	} else if (fd.get("cargo_intake_from")=="t") {
 		fd.set("cargo_intake_from", "high")
+		offense += 2
 	} else if (fd.get("cargo_intake_from")=="g") {
 		fd.set("cargo_intake_from", "ground")
+		offense +=5
 	} else {
 		fd.set("cargo_intake_from", "not attempted")
 	}
+	offense += (Integer.parseInt(fd.get("speed")) * 8)
+	defense += (Integer.parseInt(fd.get("speed")) * 8)
+	offense += autoPoints + telePoints
+	defense += (int)((autoPoints + telePoints)/5)
+	offense -= (Integer.parseFloat(fd.get("how_long_to_dock")) * 3) + 12
+	defense -= (Integer.parseFloat(fd.get("how_long_to_dock")) * 3) + 12
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
+	fd.append("offense_ranking", offense);
+	fd.append("defense_ranking", defense);
 	if (useStr) {
 		return str
 	} else {
