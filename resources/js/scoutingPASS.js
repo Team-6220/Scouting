@@ -883,7 +883,7 @@ function getData(useStr) {
 	if(fd.get("auto_docked")=="d"){
 		fd.set("auto_docked", "docked")
 		defense +=6
-		offesne += 3
+		offense += 3
 	} else if (fd.get("auto_docked")=="e"){
 		fd.set("auto_docked", "engaged")
 		defense += 13
