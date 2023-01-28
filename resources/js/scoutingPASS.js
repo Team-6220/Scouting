@@ -936,8 +936,8 @@ function getData(useStr) {
 	} else {
 		fd.set("cargo_intake_from", "not attempted")
 	}
-	offense += (Integer.parseInt(fd.get("speed")) * 8)
-	defense += (Integer.parseInt(fd.get("speed")) * 8)
+	offense += (Integer.parseFloat(fd.get("speed")) * 8)
+	defense += (Integer.parseFloat(fd.get("speed")) * 8)
 	offense += autoPoints + telePoints
 	defense += (int)((autoPoints + telePoints)/5)
 	offense -= (Integer.parseFloat(fd.get("how_long_to_dock")) * 3) + 12
