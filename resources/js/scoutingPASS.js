@@ -936,12 +936,12 @@ function getData(useStr) {
 	} else {
 		fd.set("cargo_intake_from", "not attempted")
 	}
-	offense += (Integer.parseFloat(fd.get("speed")) * 8)
-	defense += (Integer.parseFloat(fd.get("speed")) * 8)
+	offense += (parseInt(fd.get("speed")) * 8)
+	defense += (parseInt(fd.get("speed")) * 8)
 	offense += autoPoints + telePoints
 	defense += (int)((autoPoints + telePoints)/5)
-	offense -= (Integer.parseFloat(fd.get("how_long_to_dock")) * 3) + 12
-	defense -= (Integer.parseFloat(fd.get("how_long_to_dock")) * 3) + 12
+	offense -= (parseFloat(fd.get("how_long_to_dock")) * 3) + 12
+	defense -= (parseFloat(fd.get("how_long_to_dock")) * 3) + 12
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
 	fd.append("offense_ranking", offense);
