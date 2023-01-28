@@ -943,8 +943,8 @@ function getData(useStr) {
 	defense -= Math.trunc(parseFloat(fd.get("how_long_to_dock"), 10) * 3) + 12
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
-	fd.append("offense_ranking", offense);
-	fd.append("defense_ranking", defense);
+	fd.append("offense_ranking", Math.trunc(offense));
+	fd.append("defense_ranking", Math.trunc(defense));
 	if (useStr) {
 		return str
 	} else {
