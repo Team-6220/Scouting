@@ -837,12 +837,12 @@ function getData(useStr) {
 		fd.set("driver_skill", "not good")
 	} else if (fd.get("driver_skill")=="a") {
 		fd.set("driver_skill", "average")
-		offense +=7
+		offense +=11
 		defense +=13
 	} else if (fd.get("driver_skill")=="v") {
 		fd.set("driver_skill", "very good")
-		offense += 10
-		defense += 20
+		offense += 20
+		defense += 25
 	}
 	if(fd.get("defense")=="x"){
 		fd.set("defense", "no defense")
@@ -939,8 +939,8 @@ function getData(useStr) {
 	defense += (parseInt(fd.get("speed"), 10) * 8)
 	offense += autoPoints + telePoints
 	defense += ((autoPoints + telePoints)/5)
-	offense -= (parseFloat(fd.get("how_long_to_dock"), 10) * 3) + 12
-	defense -= (parseFloat(fd.get("how_long_to_dock"), 10) * 3) + 12
+	offense -= (parseFloat(fd.get("how_long_to_dock"), 10) * 3) - 12
+	defense -= (parseFloat(fd.get("how_long_to_dock"), 10) * 3) - 12
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
 	fd.append("offense_ranking", offense);
