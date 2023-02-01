@@ -846,23 +846,23 @@ function getData(useStr) {
 	}
 	if(fd.get("defense")=="x"){
 		fd.set("defense", "no defense")
-		offense += 2
+		offense += 3
 	} else if (fd.get("defense")=="b") {
 		fd.set("defense", "below average")
 		offense += 1
-		defense += 5
+		defense += 13
 	} else if (fd.get("defense")=="a") {
 		fd.set("defense", "average")
 		offense += 3
-		defense +=15
+		defense +=22
 	} else if (fd.get("defense")=="g") {
 		fd.set("defense", "good")
 		offense += 4
-		defense += 30
+		defense += 35
 	} else if (fd.get("defense")=="e") {
 		fd.set("defense", "excellent")
 		offense += 6
-		defense += 40
+		defense += 50
 	}
 	if(fd.get("good_partner")=="1"){
 		fd.set("good_partner", "yes")
@@ -935,8 +935,8 @@ function getData(useStr) {
 	} else {
 		fd.set("cargo_intake_from", "not attempted")
 	}
-	offense += (parseInt(fd.get("speed"), 10) * 8)
-	defense += (parseInt(fd.get("speed"), 10) * 8)
+	offense += (parseInt(fd.get("speed"), 10) * 5)
+	defense += (parseInt(fd.get("speed"), 10) * 5)
 	offense += autoPoints + telePoints
 	offense -= (parseFloat(fd.get("how_long_to_dock"), 10) * 3) - 12
 	defense -= (parseFloat(fd.get("how_long_to_dock"), 10) * 3) - 12
