@@ -938,8 +938,8 @@ function getData(useStr) {
 	offense += (parseInt(fd.get("speed"), 10) * 5)
 	defense += (parseInt(fd.get("speed"), 10) * 5)
 	offense += autoPoints + telePoints
-	offense -= (parseFloat(fd.get("how_long_to_dock"), 10) * 3) - 12
-	defense -= (parseFloat(fd.get("how_long_to_dock"), 10) * 3) - 12
+	offense -= (parseFloat(fd.get("how_long_to_dock"), 10) * 3) - 21
+	defense -= (parseFloat(fd.get("how_long_to_dock"), 10) * 3) - 21
 	fd.append("auto_points_scored", autoPoints);
 	fd.append("tele_points_scored", telePoints);
 	fd.append("offense_ranking", offense);
