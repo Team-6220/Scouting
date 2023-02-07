@@ -846,22 +846,17 @@ function getData(useStr) {
 	}
 	if(fd.get("defense")=="x"){
 		fd.set("defense", "no defense")
-		offense += 3
 	} else if (fd.get("defense")=="b") {
 		fd.set("defense", "below average")
-		offense += 1
 		defense += 13
 	} else if (fd.get("defense")=="a") {
 		fd.set("defense", "average")
-		offense += 3
 		defense +=22
 	} else if (fd.get("defense")=="g") {
 		fd.set("defense", "good")
-		offense += 4
 		defense += 35
 	} else if (fd.get("defense")=="e") {
 		fd.set("defense", "excellent")
-		offense += 6
 		defense += 50
 	}
 	if(fd.get("good_partner")=="1"){
