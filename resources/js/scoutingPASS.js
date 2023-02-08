@@ -846,9 +846,10 @@ function getData(useStr) {
 	}
 	if(fd.get("defense")=="x"){
 		fd.set("defense", "no defense")
+		defense += 15
 	} else if (fd.get("defense")=="b") {
 		fd.set("defense", "below average")
-		defense += 13
+		defense += 10
 	} else if (fd.get("defense")=="a") {
 		fd.set("defense", "average")
 		defense +=22
