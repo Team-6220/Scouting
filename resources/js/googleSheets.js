@@ -5,7 +5,7 @@ function sendToGoogleSheets(){
         console.log(`${key}: ${value}\n`);
       }
 
-      fetch('https://script.google.com/macros/s/AKfycbwLMqEvVQYSSxeAL58DGDdNPwcDPOUhPRbErxkIYY_ElKVK6vv0umVDW5z5WM6d07k/exec', { method: 'POST', body: fd })
+      fetch('https://script.google.com/macros/s/AKfycbwi17fq9jWzfv2EkuhCDd7JkybSQdRn6WeLvGiMqsJMLqKhPWn3iUbYt8HdzTBFL3BxNw/exec', { method: 'POST', body: fd })
         .then(response => { 
               alert('Success!', response) })
         .catch(error => {
